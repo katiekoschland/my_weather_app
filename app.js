@@ -2,14 +2,17 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 // const sass = require('node-sass');
+
+// path module provides utilities for working with file and directory paths
+
 const app = express();
-
-//path module provides utilities for working with file and directory paths
-// const path = require('path');
-
+const path = require('path');
+//
 // To handle HTTP POST reuest in express, you need to install the module body-parsser. It extracts the entire body portion of an incoming request stream
 // and exposes it on req.body
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 let handlebars = exphbs.create({
   defaultLayout: 'main',
@@ -24,6 +27,11 @@ app.use(express.static('public'));
 
 app.get('/', (req,res) => {
   res.sendFile(__dirname + '/views/layouts/main.html');
+
+});
+
+app.get('/weather', (req, res) => {
+  res.send('This page will show us the weather');
 });
 
 const PORT = process.env.PORT || 5000;
