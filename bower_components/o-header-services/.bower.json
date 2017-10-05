@@ -1,0 +1,27 @@
+{
+  "name": "o-header-services",
+  "dependencies": {
+    "o-assets": "^3.0.2",
+    "o-header": "^7.0.0",
+    "o-icons": ">=4.4.2 <6",
+    "o-colors": "^4.0.0",
+    "o-grid": "^4.2.0",
+    "o-typography": "^5.0.0"
+  },
+  "main": [
+    "main.scss",
+    "main.js"
+  ],
+  "homepage": "https://github.com/Financial-Times/o-header-services",
+  "version": "2.0.1",
+  "_release": "2.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.1",
+    "commit": "cc76eacdcd961abe50a512b4522c0c95b8072bc0"
+  },
+  "_source": "https://github.com/Financial-Times/o-header-services.git",
+  "_target": "^2.0.1",
+  "_originalSource": "o-header-services",
+  "_direct": true
+}

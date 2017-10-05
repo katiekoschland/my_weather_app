@@ -1,0 +1,13 @@
+@if $o-header-services-is-silent == false {
+
+	@include oHeaderDrawer();
+
+	.o-header__visually-hidden {
+		@include oHeaderVisuallyHidden;
+	}
+
+	// Override some styles here for the drawer
+	.o-header-drawer--services {
+
+	}
+}
