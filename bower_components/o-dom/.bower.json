@@ -1,0 +1,26 @@
+{
+  "name": "o-dom",
+  "main": [
+    "main.js"
+  ],
+  "ignore": [
+    ".gitignore",
+    ".travis.yml",
+    "karma.conf.js",
+    "package.json",
+    "test"
+  ],
+  "dependencies": {},
+  "homepage": "https://github.com/Financial-Times/o-dom",
+  "version": "2.0.4",
+  "_release": "2.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.4",
+    "commit": "b7ee7d3dd7c91eacd9011f5ad7abb406a910691a"
+  },
+  "_source": "https://github.com/Financial-Times/o-dom.git",
+  "_target": "^2.0.4",
+  "_originalSource": "o-dom",
+  "_direct": true
+}

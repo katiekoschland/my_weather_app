@@ -6,30 +6,32 @@
   <title>Weather App</title>
   <meta charset="utf-8">
   <header class="o-header-services" data-o-component="o-header">
-	<div class="o-header-services__top o-header-services__container">
-		<div class="o-header-services__ftlogo"></div>
-		<div class="o-header-services__title">
-			<h1 class="o-header-services__product-name"><a href="/">Weather App</a></h1><span class="o-header-subrand__product-tagline "></span>
-		</div>
-	</div>
-</header>
+    <div class="o-header-services__top o-header-services__container">
+      <div class="o-header-services__ftlogo"></div>
+      <div class="o-header-services__title">
+        <h1 class="o-header-services__product-name"><a href="/">Weather App</a></h1><span class="o-header-subrand__product-tagline "></span>
+      </div>
+    </div>
+  </header>
 </head>
 <body>
   <div class="o-grid-container">
     <div class="o-grid-row">
       <div data-o-grid-colspan="one-third center">
         <div class="o-forms">
-          <br><br>
-          <label for="o-forms-standard" class="o-forms__label">Find the current temperature in degree celsius</label>
-          <br><br>
-          <input type="text" id="o-forms-standard" placeholder="Please Enter a City" class="o-forms__text" required=""></input>
-          </br></br>
-          <button id="save" class="o-buttons">Submit</button>
-        </div>
+        </br></br>
+        <fieldset>
+          <form action="/" method="post">
+            <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+            <input type="submit" class="ghost-button" value="Get Weather">
+          </form>
+        </fieldset>
+        <h2>{{weather}}</h2>
       </div>
     </div>
   </div>
 </div>
-		<script src="../weather.js"></script>
+</div>
+<script src="../weather.js"></script>
 </body>
 </html>

@@ -6,11 +6,11 @@ MVP
 
 As a user,
 In order to see the weather in my current location,
-I would like to be able to select the city.
+I would like to be able to enter a city into a text box.
 
 As a user,
 In order to see the weather in my current location,
-I would like it to be displayed in Fahrenheit.
+I would like it to be displayed in Degrees Celsius.
 
 As a user,
 In order to see the weather in my current location,
@@ -26,13 +26,18 @@ As a user,
 So that I know it is an FT app,
 I would like to be able to see origami styling.
 
+1) Be able to take the text input and store it as the city.
+2) Redirect to the /weather route - this will display the weather
+3) Have a toggle box to convert the weather from celsius to Fahrenheit
+      ((c * 1.8) + 32 = F)
+   Origami has it's own checkbox which acts as a toggle in o-forms. So use this.
+4) Set up a makefile and have commands like make build run, make watch work.
 
 
-* Watch a git tutorial
-* Setup origami, so that it's working
-* Set up make (makefile, commands make build run, make watch work)
-* Go over how to use an API using express - what weather api am I going to use?
-* Use origami toggle button
-* Fahrenheit to celsius conversion -  celsius-->Fahrenheit
-(c * 1.8) + 32 = F
-* Learn about EC2 for AWS
+Extras to learn (- later today or over the weekend)
+
+1) Watch a git tutorial - learn git fetch all, git stash, git branch.
+
+2) Learn about EC2 for AWS, and AWS in general - cloud computing.
+
+3) Really like to complete the FT Tech test and learn how to use their apis and create my own FT.com

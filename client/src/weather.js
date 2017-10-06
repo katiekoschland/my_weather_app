@@ -18,3 +18,13 @@
 // });
 //
 // module.exports;
+
+// document.addEventListener('DOMContentLoaded', initialise);
+
+
+// const el = document.querySelector('#save');
+//
+// el.addEventListener('click', (e) => {
+//   const city = document.querySelector('#o-forms-standard').innerHTML;
+//   console.log(city);
+// });
