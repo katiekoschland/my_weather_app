@@ -39,6 +39,11 @@
             <div class="o-card__content">
               <h3 class="o-card__heading"><a>{{weatherCelsius}}</a></h3>
               <h3>{{weatherFahrenheit}}</h3>
+              {{#if sun}}
+              <img src="./images/sun.jpg" alt="sun">
+              {{else}}
+              <img src="./images/cloud.png" alt="cloud">
+              {{/if}}
             </div>
           </div>
         </div>

@@ -44,7 +44,14 @@ app.post('/', (req,res) => {
         const fahrenheit = (((weather.main.temp - 273.15) * 1.8) + 32).toFixed(2);
         const weatherCelsius = `It's ${celsius} degrees in ${weather.name}!`;
         const weatherFahrenheit = `(${fahrenheit} fahrenheit)`;
-        res.render((__dirname + '/views/layouts/main.html'), { weatherCelsius: weatherCelsius, weatherFahrenheit: weatherFahrenheit });
+        let sun;
+        let cloud;
+        if (celsius> 15) {
+          sun = true;
+        } else {
+          cloud = true;
+        }
+        res.render((__dirname + '/views/layouts/main.html'), { weatherCelsius: weatherCelsius, weatherFahrenheit: weatherFahrenheit, sun: sun });
       }
     }
   });
