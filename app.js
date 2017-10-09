@@ -51,7 +51,7 @@ app.post('/', (req,res) => {
         } else {
           cloud = true;
         }
-        res.render((__dirname + '/views/layouts/main.html'), { weatherCelsius: weatherCelsius, weatherFahrenheit: weatherFahrenheit, sun: sun });
+        res.render((__dirname + '/views/layouts/main.html'), { weatherCelsius: weatherCelsius, weatherFahrenheit: weatherFahrenheit, sun: sun});
       }
     }
   });
