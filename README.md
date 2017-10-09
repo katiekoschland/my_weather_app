@@ -8,7 +8,7 @@ I would like to see a toggle button that converts the temperature for me.
 
 As a user,
 So that I can quickly determine the weather,
-I would also like to see a different icon depending on the temperature.
+I would also like the background to change depending on the temperature.
 
 As a user,
 So that I know it is an FT app,
