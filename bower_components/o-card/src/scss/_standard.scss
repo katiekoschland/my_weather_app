@@ -1,0 +1,198 @@
+////
+/// @group o-card base styles
+/// @link http://registry.origami.ft.com/components/o-card
+////
+
+/// Base card styles
+@mixin oCard {
+	@include oColorsFor(o-card box, background);
+	box-sizing: border-box;
+	width: 100%;
+	padding: $o-card-spacing-unit $o-card-spacing-unit 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	overflow: auto; // clear floats
+}
+
+/// Base styles for meta image element floated to the right and fixed size
+@mixin oCardMetaImage {
+	float: right;
+	width: $o-card-meta-image-size;
+	height: $o-card-meta-image-size;
+}
+
+/// Base tag styles
+@mixin oCardTag {
+	@include oColorsFor(o-card-tag, text);
+	@include oTypographySansBold(0);
+	display: block;
+	margin: 0 0 $o-card-spacing-unit;
+	// If the tag is used as a link
+	text-decoration: none;
+
+	#{$o-hoverable-if-hover-enabled} &:hover {
+		@include oColorsFor(o-card-tag-hover, text);
+	}
+}
+
+/// Base styles for content element giving correct order and box-sizing
+@mixin oCardContent {
+	box-sizing: inherit;
+	float: none;
+	width: 100%;
+	order: 2;
+}
+
+@mixin oCardContentRight {
+	width: 60%;
+	float: right;
+}
+
+/// Base timestamp styles
+@mixin oCardTimestamp {
+	@include oColorsFor(o-card-timestamp, text);
+	@include oTypographySans(-2);
+	display: block;
+	padding: $o-card-spacing-unit 0;
+	text-transform: uppercase;
+}
+
+/// Base heading styles (includes link styles within the element)
+@mixin oCardHeading {
+	@include oTypographyHeadingLevel2;
+	@include oColorsFor(link-title, text);
+	margin-bottom: $o-card-spacing-unit;
+
+	&--small {
+		@include oTypographyHeadingLevel3;
+	}
+
+	// If there is a link in the heading
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:visited {
+			@include oColorsFor(o-card-link-visited, text);
+		}
+	}
+
+	#{$o-hoverable-if-hover-enabled} a:hover {
+		border-bottom: 1px dotted;
+	}
+}
+
+/// Base standfirst text styles
+@mixin oCardStandfirst {
+	@include oColorsFor(o-card-standfirst, text);
+	@include oTypographySerif(0);
+	margin: 0;
+}
+
+/// Card image styles, also applies top and bottom modifiers
+@mixin oCardImage {
+	box-sizing: inherit;
+	display: block;
+	margin: 0 0 $o-card-spacing-unit;
+
+	// To prevent the content of the flex-item breaking out of the container in Firefox
+	// https://bugzilla.mozilla.org/show_bug.cgi?id=1108514#c2
+	min-width: 0;
+	flex-shrink: 0;
+
+	// Default image to the bottom of the card,
+	// based on default all elements have order: 0
+	order: 1;
+
+	&--top {
+		@include oCardImageTop;
+	}
+
+	&--right {
+		@include oCardImageRight;
+	}
+
+	&--bottom {
+		@include oCardImageBottom;
+	}
+
+	&--left {
+		@include oCardImageLeft;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 0;
+	}
+}
+
+@mixin oCardPortraitImage {
+	float: none;
+	width: 100%;
+	padding: 0;
+}
+
+/// Base related content list styles
+@mixin oCardRelatedContent {
+	@include oColorsFor(o-card-list, text);
+	list-style: none inside;
+	margin: $o-card-spacing-unit/2 0 $o-card-spacing-unit; // Top margin is set as half bottom margin
+	padding: 0;
+	order: 6; // To appear below an image
+}
+
+/// Base related content item styles, including link styles
+@mixin oCardRelatedContentItem {
+	@include oTypographySans(-2);
+	@include oColorsFor(link-title, text);
+	padding: 2px 0;
+
+	&:before {
+		content: '>';
+		display: inline-block;
+		margin-right: $o-card-spacing-unit;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	#{$o-hoverable-if-hover-enabled} a:hover {
+		border-bottom: 1px dotted;
+	}
+}
+
+/// Styles for a left aligned image
+@mixin oCardImageLeft {
+	float: left;
+	width: $o-card-image-left-width;
+	padding-right: $o-card-spacing-unit;
+	margin: 0;
+}
+
+/// Styles for a right aligned image
+@mixin oCardImageRight {
+	float: right;
+	width: $o-card-image-right-width;
+	padding-left: $o-card-spacing-unit;
+	margin: 0;
+}
+
+/// Styles to force an image to the top of the card
+@mixin oCardImageTop {
+	order: -1;
+	margin: 0 0 $o-card-spacing-unit;
+}
+
+/// Styles to force an image to the bottom of the card
+@mixin oCardImageBottom {
+	// Ensure image goes to the bottom of the card
+	// set to '6' in case anyone re-orders other card elements
+	order: 6;
+	margin: $o-card-spacing-unit 0 0;
+}

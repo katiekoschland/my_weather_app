@@ -1,0 +1,20 @@
+$o-card-is-silent: false;
+$o-card-output-fonts: true;
+@import '../../main';
+
+.demo-container {
+	padding: 20px;
+	width: 200px;
+}
+
+.demo-container--large {
+	width: 300px;
+}
+
+.demo-container--landscape {
+	width: 350px;
+}
+
+.demo-tag-hover {
+	@include oColorsFor(o-card-tag-hover, text);
+}
