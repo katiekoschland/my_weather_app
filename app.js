@@ -46,7 +46,7 @@ app.post('/', (req,res) => {
         const weatherFahrenheit = `(${fahrenheit} fahrenheit)`;
         let sun;
         let cloud;
-        if (celsius> 15) {
+        if (celsius> 20) {
           sun = true;
         } else {
           cloud = true;

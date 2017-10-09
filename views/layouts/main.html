@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-forms,o-buttons,o-grid,o-header-services,o-card" />
+  <link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-forms,o-buttons,o-grid,o-header-services,o-card,o-table" />
   <link rel="stylesheet" href="/main.css" />
   <title>Weather App</title>
   <meta charset="utf-8">
@@ -15,51 +15,50 @@
   </header>
 </head>
 <body>
-  <div class="o-grid-container">
-    <div class="o-grid-row">
-      <div data-o-grid-colspan="one-third center">
-        <div class="o-forms">
-          <form action="/" method="post">
-            <br>
-            <h1>Find the temperature in your city</h1>
-            <input name="city" type="text" placeholder="Enter a City" id="o-forms__textarea" class="o-forms__textarea"required>
-            <br><br>
-            <input type="submit" class="o-buttons" value="Get Weather">
-          </form>
-          <br><br><br>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="o-grid-container">
-    <div class="o-grid-row">
-      <div data-o-grid-colspan="one-third center">
-        <div class="demo-container demo-container--">
-          <div class="o-card o-card-- o-card--image-" data-o-component="o-card">
-            <div class="o-card__content">
-              <h3 class="o-card__heading"><a>{{weatherCelsius}}</a></h3>
-              <form action="" data-o-component="o-forms">
-                <br><br><br>
-                <fieldset class="o-forms">
-                  <legend class="o-forms__label">Convert to Fahrenheit</legend>
-                  <div class="o-forms__checkbox-toggle">
-                    <input class="o-forms__checkbox-toggle__checkbox" data-o-form-toggle="" type="checkbox" name="checkbox" value="1" id="checkboxToggle1"></input>
-                    <label for="checkboxToggle1" class="o-forms__label" id="click"></label>
-                  </div>
-                    <h2 style= "display: none" id="fahrenheit">{{weatherFahrenheit}}</h2>
-                </fieldset>
+  <br><br><br>
+  <table class="o-table" data-o-component="o-table">
+    <caption class="o-table__caption--top">
+      <br><br>
+      Find the temperature in your city
+      <div class="o-grid-container">
+        <div class="o-grid-row">
+          <div data-o-grid-colspan="one-third center">
+            <div class="o-forms">
+              <form action="/" method="post">
+                <input name="city" type="text" placeholder="Enter a City" id="o-forms__textarea" class="o-forms__textarea"required>
+                <br><br>
+                <input type="submit" class="o-buttons" value="Get Weather">
               </form>
-              {{#if sun}}
-              <img src="./images/sun.jpg" alt="sun">
-              {{else}}
-              <img src="./images/cloud.png" alt="cloud">
-              {{/if}}
             </div>
           </div>
         </div>
       </div>
+      <div>
+        <h3>{{weatherCelsius}}</h3>
+        <br><br>
+        <div data-o-grid-colspan="one-third center"><div class="demo-cell">  <form action="" data-o-component="o-forms">
+          <fieldset>
+            <fieldset class="o-forms">
+              <legend class="o-forms__label">Convert to Fahrenheit</legend>
+              <div class="o-forms__checkbox-toggle">
+                <input class="o-forms__checkbox-toggle__checkbox" data-o-form-toggle="" type="checkbox" name="checkbox" value="1" id="checkboxToggle1"></input>
+                <label for="checkboxToggle1" class="o-forms__label" id="click"></label>
+              </div>
+            </fieldset>
+            <p style= "display: none" id="fahrenheit">{{weatherFahrenheit}}</p>
+          </fieldset>
+        </form></div>
+      </div>
+        {{#if sun}}
+        <body background="./images/sun.jpg" alt="sun">
+        {{else}}
+      </body>
+        <body background="./images/cloud.png" alt="cloud">
+        {{/if}}
+      </body>
     </div>
-  </div>
-  <script src="./converter.js"></script>
+</caption>
+</table>
+<script src="./converter.js"></script>
 </body>
 </html>
