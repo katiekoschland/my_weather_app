@@ -17,8 +17,8 @@
 <body>
   <br><br><br>
   <table class="o-table" data-o-component="o-table">
-    <caption class="o-table__caption--top">
-      <br><br>
+    <caption style="border:none" class="o-table__caption--top">
+      <br><br><br>
       Find the temperature in your city
       <div class="o-grid-container">
         <div class="o-grid-row">
@@ -43,14 +43,13 @@
               <div class="o-forms__checkbox-toggle">
                 <input class="o-forms__checkbox-toggle__checkbox" data-o-form-toggle="" type="checkbox" name="checkbox" value="1" id="checkboxToggle1"></input>
                 <label for="checkboxToggle1" class="o-forms__label" id="click"></label>
-              </div>
+              </div><h2 style= "display: none" id="fahrenheit"><b><font color="red">{{weatherFahrenheit}}</font></h2>
             </fieldset>
-            <p style= "display: none" id="fahrenheit">{{weatherFahrenheit}}</p>
           </fieldset>
         </form></div>
       </div>
         {{#if sun}}
-        <body background="./images/sun.jpg" alt="sun">
+        <body background="./images/sun.png" alt="sun">
         {{else}}
       </body>
         <body background="./images/cloud.png" alt="cloud">
@@ -59,6 +58,6 @@
     </div>
 </caption>
 </table>
-<script src="./converter.js"></script>
+<script src="./js/converter.js"></script>
 </body>
 </html>
