@@ -38,7 +38,7 @@ app.post('/', (req,res) => {
     } else {
       let weather = JSON.parse(body);
       if (weather.main === undefined){
-        res.render('main', {weathher: null, error: 'Error, please try again'});
+        res.render('main', {weather: null, error: 'Error, please try again'});
       } else {
         const celsius = (weather.main.temp - 273.15).toFixed(2);
         const fahrenheit = (((weather.main.temp - 273.15) * 1.8) + 32).toFixed(2);

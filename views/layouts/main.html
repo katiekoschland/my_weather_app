@@ -9,7 +9,7 @@
     <div class="o-header-services__top o-header-services__container">
       <div class="o-header-services__ftlogo"></div>
       <div class="o-header-services__title">
-        <h1 class="o-header-services__product-name"><a href="/">Weather App</a></h1><span class="o-header-subrand__product-tagline "></span>
+        <h1 class="o-header-services__product-name"><a hreqf="/">Weather App</a></h1><span class="o-header-subrand__product-tagline "></span>
       </div>
     </div>
   </header>
@@ -44,20 +44,20 @@
                 <input class="o-forms__checkbox-toggle__checkbox" data-o-form-toggle="" type="checkbox" name="checkbox" value="1" id="checkboxToggle1"></input>
                 <label for="checkboxToggle1" class="o-forms__label" id="click"></label>
               </div><h2 style= "display: none" id="fahrenheit"><b><font color="red">{{weatherFahrenheit}}</font></h2>
+              </fieldset>
             </fieldset>
-          </fieldset>
-        </form></div>
-      </div>
+          </form></div>
+        </div>
         {{#if sun}}
         <body background="./images/sun.png" alt="sun">
-        {{else}}
-      </body>
+          {{else}}
+        </body>
         <body background="./images/cloud.png" alt="cloud">
-        {{/if}}
-      </body>
-    </div>
-</caption>
-</table>
-<script src="./js/converter.js"></script>
+          {{/if}}
+        </body>
+      </div>
+    </caption>
+  </table>
+  <script src="./js/converter.js"></script>
 </body>
 </html>

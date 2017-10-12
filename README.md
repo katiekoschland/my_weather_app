@@ -17,22 +17,13 @@ npm start
 # User Stories
 
 ````
-As a user,
-In order to see the weather in my current location,
-I would like to be able to enter a city into a text box and click Get Weather.
+User Story: I can see the weather in my current location.
 
-As a user,
-So that I can convert the weather from Celsius to Fahrenheit
-I would like to see a toggle button that converts the temperature for me.
+User Story: I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.
 
-As a user,
-So that I can quickly determine the weather,
-I would also like the background to change depending on the temperature.
+User Story: I can push a button to toggle between Fahrenheit and Celsius.
 
-As a user,
-So that I know it is an FT app,
-I would also like to be able to see origami styling.
-````
+User Story: I can see Origami styling
 
 # Technologies used
 
