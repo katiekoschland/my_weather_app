@@ -24,7 +24,7 @@ User Story: I can push a button to toggle between Fahrenheit and Celsius.
 
 User Story: I can see Origami styling
 
-User Story: I would like to deploy the Weather App to Heroku -https://secret-reaches-59994.herokuapp.com/
+User Story: I would like to deploy the Weather App to Heroku - https://kt-weather-app.herokuapp.com/
 
 # Technologies used
 
