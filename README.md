@@ -13,7 +13,6 @@ To run my_weather_app
 npm start
 ````
 
-
 # User Stories
 
 ````
@@ -24,6 +23,8 @@ User Story: I can see a different icon or background image (e.g. snowy mountain,
 User Story: I can push a button to toggle between Fahrenheit and Celsius.
 
 User Story: I can see Origami styling
+
+User Story: I would like to deploy the Weather App to Heroku -https://secret-reaches-59994.herokuapp.com/
 
 # Technologies used
 

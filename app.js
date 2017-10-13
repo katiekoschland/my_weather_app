@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const app = express();
 
 const request = require('request');
-const apiKey = '948bcac04c4c2646c9fcd6f1d5d4b4d0';
+const apiKey = process.env.API_KEY;
 
 // To handle HTTP POST reuest in express, you need to install the module body-parsser. It extracts the entire body portion of an incoming request stream
 // and exposes it on req.body
